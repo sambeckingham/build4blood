@@ -4,6 +4,7 @@ env:
     OUTPUT_PATH: ${{ github.workspace }}/.output
 
 on:
+  workflow_dispatch:
   push:
     branches: 
       - master
