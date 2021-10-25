@@ -7,6 +7,6 @@ TODO:
 - Add card pictures from game
 - Replicate in game styles
 - Flesh out effects system
-- Build summary
+- Build effect summary
 - Add Swarm cards
 
