@@ -2,40 +2,33 @@ import { writable } from 'svelte/store'
 import type { Writable } from 'svelte/store'
 import type Card from '$lib/Card'
 
-class Deck {
-    stack: Writable<Card[]>;
+export const deck: Writable<Card[]> = writable([])
+export const deckName: Writable<string> = writable("")
 
-    constructor() {
-        this.stack = writable([]);
-    }
-
-    add(card: Card): void {
-        let stack: Card[]
-        this.stack.subscribe(value => stack = value)
-
-        if (stack.length >= 15) {
+export function addCard(card: Card): void {      
+    deck.update(deck => {
+        if (deck.length >= 15) {
             console.log("Deck is full")
-            return
+            return deck
+        }
+    
+        if (deck.find(c => c === card)) {
+            console.log("Card already in deck")
+            return deck
         }
 
-        if (stack.find(c => c === card)) {
-             console.log("Card already in deck")
-             return
-        }
-            
-        this.stack.update(stk => [...stk, card]);
-    }
-
-    remove(card: Card): void {
-        let stack: Card[]
-        this.stack.subscribe(value => stack = value)
-
-        if (stack.find(c => c === card) == undefined) {
-            console.log("Card not in deck")
-        }
-            
-        this.stack.update(stk => stk.filter(c => c !== card));
-    }
+        return [...deck, card]
+    })
 }
 
-export const deckStore = new Deck();
+export function removeCard(card: Card): void {
+    deck.update(deck => {
+        if (deck.find(c => c === card) == undefined) {
+            console.log("Card not in deck")
+            return deck
+        };
+
+        return deck.filter(c => c !== card)
+    })
+}
+

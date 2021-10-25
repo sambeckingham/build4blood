@@ -564,7 +564,7 @@
     "Position In Track": "6"
   },
   {
-    "Deck Category": "Campaign ",
+    "Deck Category": "Campaign",
     "Type": "Offense",
     "Card Affinity": "Reflex",
     "Team Effect": "No",
@@ -3360,7 +3360,7 @@
     "Position In Track": "N/A"
   },
   {
-    "Deck Category": "Campaign ",
+    "Deck Category": "Campaign",
     "Type": "Loot",
     "Card Affinity": "Upgrade",
     "Team Effect": "Yes",

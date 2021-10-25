@@ -228,6 +228,18 @@
     "Type": "Defense"
   },
   {
+    "Deck Category": "Campaign",
+    "Type": "Offense",
+    "Card Affinity": "Reflex",
+    "Team Effect": "No",
+    "Copper Cost": "400",
+    "Name": "Brazen",
+    "Effect Description": " +30% Melee Stamina Efficiency, +30% Melee Attack speed, -5% Damage Resistance",
+    "Suppy Line": "Bridge Town (2)",
+    "Supply Track": "Nest",
+    "Position In Track": "5"
+  },
+  {
     "Card Affinity": "Reflex",
     "Copper Cost": "800",
     "Deck Category": "Campaign",
